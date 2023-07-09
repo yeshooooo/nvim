@@ -5,6 +5,7 @@
 -- automatically pick-up stored data by this setting.)
 return {
   -- first key is the mode
+  -- n 代表normal模式，t代表terminal，i代表insert, v 代表visual
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
