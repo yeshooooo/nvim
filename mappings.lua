@@ -25,4 +25,30 @@ return {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+--   if is_available "flash.nvim" then
+--     n["<leader>s"] = {
+--       function() require("flash").jump() end,
+--       desc = "Flash",
+--     }
+--     x["<leader>s"] = {
+--       function() require("flash").jump() end,
+--       desc = "Flash",
+--     }
+--     o["<leader>s"] = {
+--       function() require("flash").jump() end,
+--       desc = "Flash",
+--    }
+--     n["<leader><leader>s"] = {
+--       function() require("flash".treesitter() end,
+--       desc = "Flash Treesitter",
+--     }
+--     x["<leader><leader>s"] = {
+--       function() require("flash").treesitter() end,
+--       desc = "Flash Treesitter",
+--     }
+--     o["<leader><leader>s"] = {
+--       function() require("flash").treesitter() end,
+--       desc = "Flash Treesitter",
+--     }
+--   end
 }

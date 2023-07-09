@@ -20,7 +20,15 @@ return {
   -- Set colorscheme to use
   -- colorscheme = "astrodark",
   -- 这里抽离成了单独的文件在同级目录下，文件名必须和key配置一样
- -- colorscheme = "catppuccin",
+  -- colorscheme = "catppuccin",
+
+  -- 设置快捷键
+  --
+  -- mappings = function(maps)
+  --   return require("user.keymap").mappings(maps)
+  -- end,
+  --
+
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
