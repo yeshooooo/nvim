@@ -1,10 +1,14 @@
-# AstroNvim Template
+# AstroNvim 
+
+仅个人自用方便
 
 **NOTE:** This is for AstroNvim v4+
 
 A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
 ## 🛠️ Installation
+
+### Linux/MacOs
 
 #### Make a backup of your current nvim and shared folder
 
@@ -24,11 +28,21 @@ You can also just clone this repository directly if you do not want to track you
 #### Clone the repository
 
 ```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
+git clone git@github.com:yeshooooo/nvim.git ~/.config/nvim
 ```
 
-#### Start Neovim
+### Windows(PowerShell)
+
+**Make a backup of your current nvim folder**
 
 ```shell
-nvim
+Move-Item $env:LOCALAPPDATA\nvim $env:LOCALAPPDATA\nvim.bak
+Move-Item $env:LOCALAPPDATA\nvim-data $env:LOCALAPPDATA\nvim-data.bak
 ```
+
+**Clone the repository**
+
+```shell
+git clone git@github.com:yeshooooo/nvim.git $env:LOCALAPPDATA\nvim
+```
+
