@@ -14,10 +14,21 @@ A template for getting started with [AstroNvim](https://github.com/AstroNvim/Ast
 
 ```shell
 mv ~/.config/nvim ~/.config/nvim.bak
+```
+
+```shell
 mv ~/.local/share/nvim ~/.local/share/nvim.bak
+```
+
+```shell
 mv ~/.local/state/nvim ~/.local/state/nvim.bak
+```
+
+```shell
 mv ~/.cache/nvim ~/.cache/nvim.bak
 ```
+
+
 
 #### Create a new user repository from this template
 
@@ -37,8 +48,13 @@ git clone git@github.com:yeshooooo/nvim.git ~/.config/nvim
 
 ```shell
 Move-Item $env:LOCALAPPDATA\nvim $env:LOCALAPPDATA\nvim.bak
+```
+
+```shell
 Move-Item $env:LOCALAPPDATA\nvim-data $env:LOCALAPPDATA\nvim-data.bak
 ```
+
+
 
 **Clone the repository**
 
