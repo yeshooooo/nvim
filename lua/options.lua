@@ -15,6 +15,10 @@ LastEditors: yeshooo@马超
 LastEditTime: 2024-12-05 11:49:26
 --]]
 
+-- 在 init.lua 开头设置
+vim.g.mapleader = " "  -- 设置 leader 键为空格
+vim.g.maplocalleader = " " -- 设置 local leader 键也为空格
+
 -- utf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = 'utf-8'

@@ -19,7 +19,7 @@ return {
         ensure_installed = {
           "cmake",  -- 这会自动安装 cmake-language-server
           "tailwindcss",
-          "vue",
+          "volar",
           
         },
         automatic_installation = true,
