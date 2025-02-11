@@ -1,11 +1,4 @@
---[[
-Description: 
-Author: yeshooo@马超
-version: 
-Date: 2024-12-04 09:00:58
-LastEditors: yeshooo@马超
-LastEditTime: 2024-12-04 09:01:24
---]]
+
 -- This file simply bootstraps the installation of Lazy.nvim and then calls other files for execution
 -- This file doesn't necessarily need to be touched, BE CAUTIOUS editing this file and proceed at your own risk.
 -- 1. 验证lazy.nvim是否存在
@@ -31,4 +24,12 @@ vim.opt.rtp:prepend(lazypath)
 -- 
 --
 --这里会自动导入lua/plugins 目录下的所有的插件配置,它会扫描整个 plugins 目录，加载所有返回插件规范的 .lua 文件
-require("lazy").setup("plugins")
+-- require("lazy").setup("plugins")
+
+-- 分开配置vscode和非vscode以及两者通用的
+-- 参考自https://github.com/vscode-neovim/vscode-neovim/wiki/Plugins#lazy-plugin-management
+require("lazy").setup({
+	{ import = "plugins.notvscode", cond = (function() return not vim.g.vscode end) },
+	{ import = "plugins.always",    cond = true },
+	{ import = "plugins.vscode",    cond = (function() return vim.g.vscode end) },
+})
