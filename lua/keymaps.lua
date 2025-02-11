@@ -43,17 +43,21 @@ wk.add({
   { "s", function() require("flash").jump() end, desc = "Flash", mode = { "n", "x", "o" } },
   { "r", function() require("flash").remote() end, desc = "Remote Flash", mode = "o" },
   { "<c-s>", function() require("flash").toggle() end, desc = "Toggle Flash Search", mode = "c" },
+  { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+  { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" }
   
 
 })
-if not vim.g.vscode then
+
+-- 这里原来是在vscode中不启用tree-sitter，现在觉得还是启用更好，但是原来的设置不删除
+--[[ if not vim.g.vscode then
   wk.add(
     {
       { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
       { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" }
     }
   )
-end
+end ]]
 
 
 

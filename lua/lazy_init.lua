@@ -32,4 +32,8 @@ require("lazy").setup({
 	{ import = "plugins.notvscode", cond = (function() return not vim.g.vscode end) },
 	{ import = "plugins.always",    cond = true },
 	{ import = "plugins.vscode",    cond = (function() return vim.g.vscode end) },
+  ui = {
+    backdrop = 60
+  }
+
 })
