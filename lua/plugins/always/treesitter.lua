@@ -11,13 +11,15 @@ else
     -- 安装文本对象插件
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
+      -- 添加一个自动关闭html标签的插件，参考自https://www.lazyvim.org/plugins/treesitter#nvim-ts-autotag
+      "windwp/nvim-ts-autotag"
     },
 
     -- 设定主模块, 因为官方默认的默认主模块并不是仓库名这个模块
     main = "nvim-treesitter.configs",
     opts = {
     -- tree-sitter的解释器都需要编译安装，我这里为了跨平台统一，同时个人习惯，设置为clang，其他gcc/cl同理
-    compilers = { "clangd" },
+    compilers = { "gcc" },
     
       -- 可以在这列出来需要安装的语言的解析器
       -- 具体支持哪些，查看官方仓库 https://github.com/nvim-treesitter/nvim-treesitter

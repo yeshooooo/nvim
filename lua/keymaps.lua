@@ -6,15 +6,7 @@ vim.keymap.set('v', '<C-c>', '"+y')  -- Visual模式下Ctrl+c复制到系统剪�
 -- keymaps.lua
 
 -- formatting 格式化
--- 暂时未生效
-if vim.g.vscode then
-  map("n", "<leader>lf", "<Cmd>lua require('vscode').call('editor.action.formatDocument')<CR>", { desc = "Format" })
-  map("v", "<leader>lf", "<Cmd>lua require('vscode').call('editor.action.formatSelection')<CR>", { desc = "Format" })
-else
-  map({ "n", "v" }, "<leader>lf", function()
-    Util.format({ force = true })
-  end, { desc = "Format" })
-end
+
 
 local wk = require("which-key") -- 这里是导入模块，插件已经在which-key.lua中引入的，注意区分
 
