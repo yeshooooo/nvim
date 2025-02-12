@@ -42,9 +42,16 @@ end ]]
 if vim.g.vscode then
   -- 关闭当前标签
   vim.keymap.set("n", "<leader>c", "<Cmd>lua require('vscode').call('workbench.action.closeEditorInAllGroups')<CR>", {desc = "Close Current Tab"})
-  -- 模仿neo-tree，打开侧边栏
+  -- 模仿neo-tree，打开文件目录栏
+  -- 常规的新建文件，重命名等已经默认设置好了https://github.com/vscode-neovim/vscode-neovim?tab=readme-ov-file#explorer-file-manipulation-bindings
   vim.keymap.set("n", "<leader>e", "<Cmd>lua require('vscode').call('workbench.action.toggleSidebarVisibility')<CR>", {desc = "toggleSidebarVisibility"})
   vim.keymap.set("n", "<leader>a", "<Cmd>lua require('vscode').call('workbench.action.toggleActivityBarVisibility')<CR>", {desc = "toggleActivityBarVisibility"})
+
+
+
+  -- 切换焦点（在编辑区和文件树之间切换）
+  vim.keymap.set("n", "<leader><leader>f", "<Cmd>lua require('vscode').call('workbench.action.focusSideBar')<CR>", {desc = "Toggle Focus"})
+  -- vim.keymap.set("n", "<leader><leader>e", "<Cmd>lua require('vscode').call('workbench.action.focusActiveEditorGroup')<CR>", {desc = "Toggle Focus"})
 
 end
 
