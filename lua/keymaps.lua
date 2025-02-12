@@ -3,6 +3,7 @@
 
 vim.keymap.set('v', '<C-c>', '"+y')  -- Visual模式下Ctrl+c复制到系统剪贴板
 
+
 -- keymaps.lua
 
 -- formatting 格式化
@@ -37,6 +38,15 @@ wk.add({
     }
   )
 end ]]
+
+if vim.g.vscode then
+  -- 关闭当前标签
+  vim.keymap.set("n", "<leader>c", "<Cmd>lua require('vscode').call('workbench.action.closeEditorInAllGroups')<CR>", {desc = "Close Current Tab"})
+  -- 模仿neo-tree，打开侧边栏
+  vim.keymap.set("n", "<leader>e", "<Cmd>lua require('vscode').call('workbench.action.toggleSidebarVisibility')<CR>", {desc = "toggleSidebarVisibility"})
+  vim.keymap.set("n", "<leader>a", "<Cmd>lua require('vscode').call('workbench.action.toggleActivityBarVisibility')<CR>", {desc = "toggleActivityBarVisibility"})
+
+end
 
 
 

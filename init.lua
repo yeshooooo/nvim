@@ -8,4 +8,4 @@ require("lazy_init")
 -- 这里让lua查找config目录下的init.lua
 -- require("config")
 -- 这里要在之后，因为which-key依赖lazynvim中导入的插件
-require("keymaps")
+require("keymaps") 
